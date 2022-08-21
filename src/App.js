@@ -1,5 +1,6 @@
 import './App.css';
 import Boton from './componentes/Boton'
+import Contador from './componentes/Contador'
 import freeCodeCampLogo from './imagenes/logo.png'
 
 function App() {
@@ -16,16 +17,17 @@ function App() {
         src={freeCodeCampLogo}/>
       </div>
       <div className='contenedor-principal'>
+        <Contador numeroClics='5' />
+
         <Boton 
           texto='Clic'
           esBotonDeClic={true}
-          manejarClic={manejarClic}
-          />
+          manejarClic={manejarClic} />
+
         <Boton 
           texto='Reiniciar'
           esBotonDeClic={false}
-          manejarClic={reiniciarContador}
-          />
+          manejarClic={reiniciarContador} />
       </div>
     </div>
   );
